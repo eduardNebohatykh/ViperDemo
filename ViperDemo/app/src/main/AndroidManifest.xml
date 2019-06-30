@@ -13,7 +13,9 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".screens.MainActivity">
+        <activity android:name=".screens.main.MainActivity">
+        </activity>
+        <activity android:name=".screens.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
