@@ -3,7 +3,7 @@ package com.example.viperdemo.screens.main
 import com.example.viperdemo.app.model.Joke
 
 class MainPresenter(private val router: MainContract.Router, private val interactor: MainInteractor) :
-    MainContract.Presenter {
+        MainContract.Presenter {
     private var view: MainContract.View? = null
 
     override fun bindView(view: MainContract.View) {

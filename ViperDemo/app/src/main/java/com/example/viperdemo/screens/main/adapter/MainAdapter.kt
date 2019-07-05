@@ -11,11 +11,11 @@ import com.example.viperdemo.app.model.Joke
 import kotlinx.android.synthetic.main.item_joke.view.*
 
 class MainAdapter(private val jokes: List<Joke>, private val listener: JokeListener) :
-    RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+        RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_joke, parent, false)
+                .inflate(R.layout.item_joke, parent, false)
         return ViewHolder(view)
     }
 

@@ -30,10 +30,10 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
     val component: MainComponent by lazy {
         DaggerMainComponent.builder()
-            .appComponent((application as App).component)
-            .activity(this)
-            .plus(MainModule())
-            .build()
+                .appComponent((application as App).component)
+                .activity(this)
+                .plus(MainModule())
+                .build()
     }
 
     @Inject

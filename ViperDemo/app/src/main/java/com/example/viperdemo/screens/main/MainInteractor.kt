@@ -11,11 +11,11 @@ class MainInteractor(private val repo: MainRepository) : MainContract.Interactor
 
     override fun getJokes(onSuccess: (List<Joke>) -> Unit, onError: (Throwable) -> Unit) {
         val disposable = repo.getJokes()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .doOnError(onError)
-            .doOnSuccess(onSuccess)
-            .subscribe()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .doOnError(onError)
+                .doOnSuccess(onSuccess)
+                .subscribe()
 
         compositeDisposable.add(disposable)
     }
