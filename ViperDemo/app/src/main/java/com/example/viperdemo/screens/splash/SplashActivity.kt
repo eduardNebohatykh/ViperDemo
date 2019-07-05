@@ -11,9 +11,6 @@ import javax.inject.Inject
 
 class SplashActivity : AppCompatActivity(), SplashContract.View {
 
-    @Inject
-    lateinit var presenter: SplashPresenter
-
     val component: SplashComponent by lazy {
         DaggerSplashComponent.builder()
             .appComponent((application as App).component)
@@ -21,6 +18,9 @@ class SplashActivity : AppCompatActivity(), SplashContract.View {
             .plus(SplashModule())
             .build()
     }
+
+    @Inject
+    lateinit var presenter: SplashPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
