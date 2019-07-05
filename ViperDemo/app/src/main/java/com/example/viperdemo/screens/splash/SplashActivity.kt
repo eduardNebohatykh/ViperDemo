@@ -13,10 +13,10 @@ class SplashActivity : AppCompatActivity(), SplashContract.View {
 
     val component: SplashComponent by lazy {
         DaggerSplashComponent.builder()
-            .appComponent((application as App).component)
-            .activity(this)
-            .plus(SplashModule())
-            .build()
+                .appComponent((application as App).component)
+                .activity(this)
+                .plus(SplashModule())
+                .build()
     }
 
     @Inject
